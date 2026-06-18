@@ -1,0 +1,132 @@
+/* ────────────────────────────────────────
+   Global reset & theme
+──────────────────────────────────────── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --sonic-blue: #0f52ba;
+  --sonic-dark-blue: #1c1e9c;
+  --sonic-gold: #ffd700;
+  --background: var(--sonic-blue);
+}
+
+html,
+body {
+  height: 100%;
+  background-color: var(--background);
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+/* ────────────────────────────────────────
+   Layout
+──────────────────────────────────────── */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  background-color: var(--sonic-blue);
+}
+
+.chat {
+  width: 100vw;
+  height: 40rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  width: 20rem;
+  height: auto;
+}
+
+/* ────────────────────────────────────────
+   Error / loading states
+──────────────────────────────────────── */
+.not-available {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 0;
+}
+
+.sonic-running {
+  position: absolute;
+  left: 0;
+  bottom: 25px;
+  width: 50px;
+}
+
+.loading-shell {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40rem;
+  color: var(--sonic-gold);
+  font-size: 1.25rem;
+}
+
+/* ────────────────────────────────────────
+   Chat UI Kit overrides
+──────────────────────────────────────── */
+
+/* Message bubble */
+.cs-message__content-wrapper {
+  background-color: var(--sonic-gold);
+  border-radius: 8px;
+  padding: 0.5rem;
+  margin: 1rem 0;
+}
+
+/* Message text */
+.cs-message__html-content {
+  text-align: start;
+  color: var(--sonic-dark-blue);
+}
+
+/* Top border radius */
+.cs-main-container {
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  border: none;
+}
+
+/* Input spacing */
+.cs-message-input__content-editor-wrapper {
+  margin: 0 1rem;
+}
+
+/* Chat background */
+.scrollbar-container {
+  background-color: var(--sonic-dark-blue);
+}
+
+/* Input container */
+.cs-chat-container .cs-message-input {
+  background-color: var(--sonic-dark-blue);
+  border: none;
+}
+
+/* Send button */
+.cs-button {
+  background-color: var(--sonic-gold);
+  color: var(--sonic-dark-blue);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 1rem;
+}
+
+/* Send button margin */
+.cs-message-input__tools:last-child {
+  margin-right: 1rem;
+}
